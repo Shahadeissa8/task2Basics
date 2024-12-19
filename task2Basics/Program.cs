@@ -1,41 +1,45 @@
-﻿// Shahad Eissa
-//Control flow
-Console.WriteLine("===============================C# control flow===============================");
+﻿Console.WriteLine("==========================Shahad Eissa Basics2===============================");
+Console.WriteLine("=============================C# control flow=================================");
+#region 1
+
 Console.WriteLine("===============================Challenge 1===================================");
-
 int i;
-for ( i =1; i<=10; i++)
+for (i = 1; i <= 10; i++)
 {
-    Console.WriteLine("the number currently is: " + i);
+    Console.WriteLine("counter: " + i);
 }
-
+#endregion
 Console.WriteLine("==================================Bonus======================================");
 
-Console.WriteLine ("=================================C# array===================================");
+
+Console.WriteLine("=================================C# array====================================");
+#region 2
 Console.WriteLine("===============================Challenge 1===================================");
-string [] daysOfWeek = new string[7];
-daysOfWeek[0] = "Monday";
-daysOfWeek[1] = "Tuesday";
-daysOfWeek[2] = "Wednesday";
-daysOfWeek[3] = "Thursday";
-daysOfWeek[4] = "Friday";
-daysOfWeek[5] = "Saturday";
-daysOfWeek[6] = "Sunday";
-for (int z = 0; z <daysOfWeek.Length; z++)
+string[] daysOfWeek1 = new string[7];
+daysOfWeek1[0] = "Monday";
+daysOfWeek1[1] = "Tuesday";
+daysOfWeek1[2] = "Wednesday";
+daysOfWeek1[3] = "Thursday";
+daysOfWeek1[4] = "Friday";
+daysOfWeek1[5] = "Saturday";
+daysOfWeek1[6] = "Sunday";
+for (int z = 0; z < daysOfWeek1.Length; z++)
 {
-    Console.WriteLine("the day is " + daysOfWeek[z]);
+    Console.WriteLine("the day is: " + daysOfWeek1[z]);
 }
 
+Console.WriteLine("============================Alternative solution=============================");
+string[] daysOfWeek2 = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+for (int y = 0; y < daysOfWeek2.Length; y++)
+{
+    Console.WriteLine("the day is: " + daysOfWeek2[y]);
+}
+#endregion
 
-// two dimention array int [,] number = {{5,6,7, },{0,3,4,}};
-// benefit {{0.0,0.1,0.2},{1.0,2.0,3.0}}
-
-
-// takes an array of int \//uses a for loop to print weather each num is even or odd
-//if the num is even it prints even otherwise prints odd
-
-
+#region 3
 Console.WriteLine("===============================Challenge 2===================================");
+
+//taking the number of the array's repeatition from the user:
 int sum = 0;
 Console.WriteLine("enter a value of repetition: ");
 int[] ThisArray = new int[Convert.ToInt32(Console.ReadLine())];
@@ -43,8 +47,19 @@ for (int x = 0; x < ThisArray.Length; x++)
 {
     Console.WriteLine("enter the value: ");
     ThisArray[x] = Convert.ToInt32(Console.ReadLine());
-    sum+= ThisArray[x] ;
-    //Console.WriteLine("enter a number to add ");
-    //int sum = sum + Convert.ToInt32(Console.ReadLine());
+    sum += ThisArray[x];
 }
 Console.WriteLine("sum: " + sum);
+
+Console.WriteLine("============================Alternative solution=============================");
+//Alternative solution: with pre-assigning the number of array's repeatition:
+int sum2 = 0;
+int[] ThisArray2 = new int[3];
+for (int x2 = 0; x2 < ThisArray2.Length; x2++)
+{
+    Console.WriteLine("enter the value you want to add: ");
+    ThisArray2[x2] = Convert.ToInt32(Console.ReadLine());
+    sum2 = sum2 + ThisArray2[x2];
+}
+Console.WriteLine("sum is: " + sum2);
+#endregion
